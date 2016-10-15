@@ -1,4 +1,4 @@
-package stepdefinitions.test;
+package com.cucumber.application.test;
 
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
