@@ -4,3 +4,4 @@ Feature:​Cash Withdrawal​
     Given I have deposited $100.90 in my
     When I request $20.90
     Then $20.90 should be dispensed
+    And the balance of my account should be $80.00
