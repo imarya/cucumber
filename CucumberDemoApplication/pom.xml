@@ -53,12 +53,11 @@
             <version>${cucumber-core-versoin}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.picocontainer/picocontainer -->
         <dependency>
             <groupId>org.picocontainer</groupId>
             <artifactId>picocontainer</artifactId>
             <version>${cucumber-picocontainer-version}</version>
-            <scope>tst</scope>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>

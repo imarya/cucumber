@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
  */
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = "pretty", snippets = SnippetType.CAMELCASE, dryRun = true)
-public class RunCukesTest {
+@CucumberOptions(plugin = "pretty", snippets = SnippetType.CAMELCASE)
+public class RunCucumberTest {
 }
