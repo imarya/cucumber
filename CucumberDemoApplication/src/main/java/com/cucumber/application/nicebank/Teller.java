@@ -16,7 +16,7 @@ public class Teller {
     }
 
     public void withdrawFromAccount(Account fromAccount, Money amount) {
-        fromAccount.dispense(amount);
+        fromAccount.debit(amount);
         cashSlot.dispense(amount);
     }
 }

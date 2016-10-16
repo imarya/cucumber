@@ -18,7 +18,7 @@ public class AccountSteps {
 
     @Given("^I have deposited \\$(\\d*\\.*\\d*) in my$")
     public void i_have_deposited_$_in_my(@Transform(MoneyConverter.class) Money amount) throws Throwable {
-        helper.getMyAccount().deposit(amount);
+        helper.getMyAccount().credit(amount);
         Assert.assertEquals("Incorrect account balance", amount, helper.getMyAccount().getBalance());
     }
 }

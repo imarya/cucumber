@@ -7,7 +7,7 @@ public class Account {
 
     private Money balance = new Money();
 
-    public void deposit(Money amount) {
+    public void credit(Money amount) {
         this.balance = balance.add(amount);
     }
 
@@ -15,7 +15,7 @@ public class Account {
         return this.balance;
     }
 
-    public void dispense(Money dispenseAmount) {
+    public void debit(Money dispenseAmount) {
         this.balance = balance.subtract(dispenseAmount);
     }
 }
