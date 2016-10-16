@@ -1,8 +1,9 @@
 package com.cucumber.application.nicebank;
 
 import com.cucumber.application.support.KnowsMyDomain;
-import cucumber.api.PendingException;
+import cucumber.api.Scenario;
 import cucumber.api.Transform;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
 
@@ -26,5 +27,10 @@ public class CashSlotSteps {
     @Then("^the balance of my account should be \\$(\\d*\\.*\\d*)$")
     public void the_balance_of_my_account_should_be_$(@Transform(MoneyConverter.class) Money balance) throws Throwable {
         Assert.assertEquals("Balance amount not match after dispensed", helper.getMyAccount().getBalance(), balance);
+    }
+
+    @After
+    public void afterCallingScenario(Scenario scenario) {
+        System.out.println("Scenario Status After Running : " + scenario.getStatus());
     }
 }

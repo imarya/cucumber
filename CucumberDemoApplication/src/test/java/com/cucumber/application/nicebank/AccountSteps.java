@@ -1,7 +1,9 @@
 package com.cucumber.application.nicebank;
 
 import com.cucumber.application.support.KnowsMyDomain;
+import cucumber.api.Scenario;
 import cucumber.api.Transform;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import org.junit.Assert;
 
@@ -14,6 +16,11 @@ public class AccountSteps {
 
     public AccountSteps(KnowsMyDomain helper) {
         this.helper = helper;
+    }
+
+    @Before
+    public void beforeCallingScenario(Scenario scenario) {
+        System.out.println("Scenario Status Before Running : " + scenario.getStatus());
     }
 
     @Given("^I have deposited \\$(\\d*\\.*\\d*) in my$")
