@@ -15,6 +15,7 @@
         <cucumber-jvm-deps-version>1.0.5</cucumber-jvm-deps-version>
         <cucumber-junit-version>1.2.5</cucumber-junit-version>
         <cucumber-picocontainer-version>2.15</cucumber-picocontainer-version>
+        <jetty-webapp-version>9.4.0.M1</jetty-webapp-version>
     </properties>
 
     <dependencies>
@@ -59,6 +60,12 @@
             <version>${cucumber-picocontainer-version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jetty-webapp-version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
